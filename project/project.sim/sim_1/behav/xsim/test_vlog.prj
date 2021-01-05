@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project.srcs/sources_1/ip/cache_mem/sim/cache_mem.v" \
+
+sv xil_defaultlib  \
+"../../../../../cache_axi_interface.sv" \
+"../../../../project.srcs/sources_1/new/top.sv" \
+"../../../../project.srcs/sim_1/new/test.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

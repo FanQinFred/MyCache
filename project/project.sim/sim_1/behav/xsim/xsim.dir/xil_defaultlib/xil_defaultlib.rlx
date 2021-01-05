@@ -1,0 +1,12 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/fanqi/Documents/GitHub/MyCache/cache.sv,1609751560,systemVerilog,,,,cache,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/cache_axi_interface.sv,1609830823,systemVerilog,,C:/Users/fanqi/Documents/GitHub/MyCache/project/project.srcs/sources_1/new/top.sv,,cache_axi_interface,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/d_cache.sv,1609751021,systemVerilog,,C:/Users/fanqi/Documents/GitHub/MyCache/i_cache.sv,,d_cache,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/i_cache.sv,1609751050,systemVerilog,,C:/Users/fanqi/Documents/GitHub/MyCache/cache.sv,,i_cache,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/project/project.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/project/project.srcs/sim_1/new/test.sv,1609832747,systemVerilog,,,,test,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/project/project.srcs/sources_1/ip/cache_mem/sim/cache_mem.v,1609833373,verilog,,,,cache_mem,,,,,,,,
+C:/Users/fanqi/Documents/GitHub/MyCache/project/project.srcs/sources_1/new/top.sv,1609831800,systemVerilog,,C:/Users/fanqi/Documents/GitHub/MyCache/project/project.srcs/sim_1/new/test.sv,,top,,,,,,,,

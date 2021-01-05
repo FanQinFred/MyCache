@@ -1,4 +1,4 @@
-module axi_interface (
+module cache_axi_interface (
     input              clk,
     input              resetn,
 
@@ -9,6 +9,7 @@ module axi_interface (
 
     input  wire [31:0] inst_addr,
     input  wire [31:0] inst_wdata,
+
     output wire [31:0] inst_rdata,
     output             inst_addr_ok,
     output             inst_data_ok,
@@ -28,7 +29,7 @@ module axi_interface (
     //ar
     output wire [3:0]  arid,
     output wire [31:0] araddr,
-    output wire [3:0]  arlen,
+    output wire [7:0]  arlen,
     output wire [2:0]  arsize,
     output wire [1:0]  arburst,
     output wire [1:0]  arlock,
@@ -46,7 +47,7 @@ module axi_interface (
     //aw           
     output wire [3:0]  awid,
     output wire [31:0] awaddr,
-    output wire [3:0]  awlen,
+    output wire [7:0]  awlen,
     output wire [2:0]  awsize,
     output wire [1:0]  awburst,
     output wire [1:0]  awlock,
@@ -165,7 +166,7 @@ module axi_interface (
     assign data_addr_ok = data_r && !read_req || data_w && !write_req;
 
     assign inst_addr_ok = !data_r && inst_r && !read_req || !data_w && inst_w && !write_req;
-    
+    // 不是读取数据 && 是读取指令 && 时钟边沿触发的读请求
     
     always @(posedge clk)
     begin
@@ -194,7 +195,7 @@ module axi_interface (
     
     assign arid = 4'b0;
     assign araddr = read_addr;
-    assign arlen = 4'b0;
+    assign arlen = 8'b0;
     assign arsize = read_size;
     assign arburst = 2'b01;
     assign arlock = 2'b0;
@@ -206,7 +207,7 @@ module axi_interface (
     
     assign awid = 4'b0;
     assign awaddr = write_addr;
-    assign awlen = 4'b0;
+    assign awlen = 8'b0;
     assign awsize = write_size;
     assign awburst = 2'b01;
     assign awlock = 2'b0;
